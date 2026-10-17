@@ -28,6 +28,16 @@ npm run build
 npm start          # serves the game at http://localhost:3001
 ```
 
+## Docker / Portainer
+
+```sh
+docker compose up -d --build    # serves the game on http://<host>:3001
+```
+
+In Portainer: Stacks → Add stack → **Repository**, URL `https://github.com/anmstha123/nepali-cards`,
+compose path `docker-compose.yml`. Change the host port in `docker-compose.yml` if 3001 is taken.
+If you put it behind a reverse proxy (Nginx Proxy Manager, Traefik…), enable WebSocket support.
+
 ## Deploy (free, so friends anywhere can play)
 
 Any Node host with WebSocket support works. On **Render**: New → Web Service → connect the repo,

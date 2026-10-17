@@ -1,0 +1,11 @@
+services:
+  nepali-cards:
+    build: .
+    image: nepali-cards:latest
+    container_name: nepali-cards
+    restart: unless-stopped
+    ports:
+      # Change the left side if 3001 is taken on your server, e.g. "8085:3001"
+      - "3001:3001"
+    environment:
+      - PORT=3001
